@@ -1,0 +1,1 @@
+enum BuildPhase { local, alpha, release }

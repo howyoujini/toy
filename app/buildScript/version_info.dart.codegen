@@ -1,0 +1,5 @@
+// %s 에 자동생성된 파일입니다. 수정하지 마세요 !
+
+const String appVersion = "%s";
+const String buildHash = "%s";
+const String buildDate = "%s";
