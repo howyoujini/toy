@@ -1,0 +1,21 @@
+name: util
+description: Util 로직 모음 - 어떤 비즈니스 로직도 포함하지 않는 순수한 utility function 들의 모음입니다.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  core:
+    path: ../core/
+
+  sprintf: ^6.0.0
+
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
