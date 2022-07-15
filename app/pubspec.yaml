@@ -1,4 +1,4 @@
-name: flutter_app
+name: app
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  core:
+    path: ../core/
+  util:
+    path: ../util/
 
   convert: ^3.0.1
   cupertino_icons: ^1.0.2

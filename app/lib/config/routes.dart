@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_app/screen/chat/v_chat.dart';
+import 'package:app/screen/chat/v_chat.dart';
 
 class AppRoutes {
   static Route? onGenerateRoutes(RouteSettings settings) {

@@ -1,5 +1,5 @@
 name: core
-description: Core 로직 모음
+description: Core 로직 모음 - 핵심 비즈니스 로직을 포함합니다.
 publish_to: none
 version: 0.1.0
 

@@ -3,7 +3,6 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/app/.pub" />
@@ -18,6 +17,11 @@
       <excludeFolder url="file://$MODULE_DIR$/util/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/util/build" />
       <excludeFolder url="file://$MODULE_DIR$/util/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/app/linux/flutter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/macos/Flutter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/windows/flutter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/ios/Flutter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/android/.gradle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

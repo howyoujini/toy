@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/color_schemes.dart';
-import 'package:flutter_app/domain/model/message.dart';
-import 'package:flutter_app/screen/chat/vm_chat.dart';
-import 'package:flutter_app/widget/message_bubble/w_message_bubble.dart';
+import 'package:app/color_schemes.dart';
+import 'package:core/model/message.dart';
+import 'package:app/screen/chat/vm_chat.dart';
+import 'package:app/widget/message_bubble/w_message_bubble.dart';
 
 class ChatBotScreen extends StatelessWidget {
   const ChatBotScreen({Key? key}) : super(key: key);
