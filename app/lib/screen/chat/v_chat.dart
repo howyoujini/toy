@@ -7,28 +7,14 @@ import 'package:core/model/message.dart';
 import 'package:app/screen/chat/vm_chat.dart';
 import 'package:app/widget/message_bubble/w_message_bubble.dart';
 
-class ChatBotScreen extends StatelessWidget {
+class ChatBotScreen extends StatefulWidget {
   const ChatBotScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(middle: Text("chatting")),
-      child: SafeArea(
-        child: MessageListView(),
-      ),
-    );
-  }
+  State<ChatBotScreen> createState() => _ChatBotScreenState();
 }
 
-class MessageListView extends StatefulWidget {
-  const MessageListView({Key? key}) : super(key: key);
-
-  @override
-  State<MessageListView> createState() => _MessageListViewState();
-}
-
-class _MessageListViewState extends State<MessageListView> {
+class _ChatBotScreenState extends State<ChatBotScreen> {
   late MessageListViewModel viewModel;
   late final List<Message> data;
 

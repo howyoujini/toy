@@ -1,28 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:contacts_service/contacts_service.dart';
+import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
-        navigationBar: CupertinoNavigationBar(middle: Text("home")),
-        child: SafeArea(
-          child: HomeView(),
-        ));
-  }
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
-
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
+class _HomeScreenState extends State<HomeScreen> {
   int total = 3;
   List<Contact> contacts = [Contact(displayName: 'kyutae')];
 
