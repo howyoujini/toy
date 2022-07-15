@@ -21,6 +21,8 @@ dependencies:
   dio: ^4.0.6
   sprintf: ^6.0.0
   equatable: ^2.0.3
+  permission_handler: ^10.0.0
+  contacts_service: ^0.6.3
 
 dev_dependencies:
   flutter_test:

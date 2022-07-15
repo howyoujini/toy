@@ -1,1 +1,5 @@
-해당 앱은 토이스토리 영화에 영감을 받아, 장난감들과 대화를 해볼 수 있습니다.
+말 그대로 toy project 입니다.
+- mvvm in flutter
+- multi module 
+- permission 앱 접근권한 요청
+- 
