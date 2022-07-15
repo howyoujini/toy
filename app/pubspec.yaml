@@ -10,20 +10,20 @@ dependencies:
   flutter:
     sdk: flutter
 
+  contacts_service: ^0.6.3
+  convert: ^3.0.1
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.6
+  equatable: ^2.0.3
+  image_picker: ^0.8.5+3
+  json_annotation: ^4.5.0
+  sprintf: ^6.0.0
+  permission_handler: ^10.0.0
+
   core:
     path: ../core/
   util:
     path: ../util/
-
-  convert: ^3.0.1
-  cupertino_icons: ^1.0.2
-  json_annotation: ^4.5.0
-  dio: ^4.0.6
-  sprintf: ^6.0.0
-  equatable: ^2.0.3
-  permission_handler: ^10.0.0
-  contacts_service: ^0.6.3
-  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

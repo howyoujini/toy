@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:app/color_schemes.dart';
 import 'package:core/model/message.dart';
 import 'package:app/screen/chat/vm_chat.dart';
 import 'package:app/widget/message_bubble/w_message_bubble.dart';
+import 'package:flutter/rendering.dart';
 
 class ChatBotScreen extends StatefulWidget {
   const ChatBotScreen({Key? key}) : super(key: key);
@@ -15,6 +15,9 @@ class ChatBotScreen extends StatefulWidget {
 }
 
 class _ChatBotScreenState extends State<ChatBotScreen> {
+  var scroll = ScrollController();
+
+
   late MessageListViewModel viewModel;
   late final List<Message> data;
 
@@ -22,11 +25,16 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
   void initState() {
     super.initState();
     data = MessageGenerator.generate(60, 300);
+    scroll.addListener(() {
+      print(scroll.position.pixels== scroll.position.maxScrollExtent);
+    });
+
   }
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+        controller: scroll,
         padding: const EdgeInsets.symmetric(vertical: 6.0),
         reverse: true,
         itemCount: data.length,
@@ -49,8 +57,7 @@ class MessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final messageAlignment =
-        message.isUser ? Alignment.topRight : Alignment.topLeft;
+    final messageAlignment = message.isUser ? Alignment.topRight : Alignment.topLeft;
 
     return FractionallySizedBox(
       alignment: messageAlignment,
@@ -68,18 +75,11 @@ class MessageBubble extends StatelessWidget {
             ),
             child: BubbleBackground(
               colors: [
-                message.isUser
-                    ? lightColorScheme.secondary
-                    : const Color.fromRGBO(255, 255, 255, 0.5),
-                message.isUser
-                    ? lightColorScheme.primary
-                    : const Color.fromRGBO(0, 0, 0, 0.1),
+                message.isUser ? lightColorScheme.secondary : const Color.fromRGBO(255, 255, 255, 0.5),
+                message.isUser ? lightColorScheme.primary : const Color.fromRGBO(0, 0, 0, 0.1),
               ],
               child: DefaultTextStyle.merge(
-                style: const TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.black,
-                ),
+                style: const TextStyle(fontSize: 14.0, color: CupertinoColors.black),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: child,
@@ -131,7 +131,6 @@ class MessageGenerator {
     'Hello, World',
     'Welcome to HERE',
     'lorem100',
-    'dd',
     '안녕하세요',
     'This will draw a gradient around the text. However, this border will be tightly bound around the text itself, which is not conducive to a presentable UI. To improve our UI, we need to insert some further customizations, such as rounded corners and padding.',
     '이용할 수 있습니다. (단, 라이선스가 명시된 일부 문서 및 삽화 제외) 기여하신 문서의 저작권은 각 기여자에게 있으며, 각 기여자는 기여하신 부분의 저작권을 갖습니다. 나무위키는 백과사전이 아니며 검증되지 않았거나, 편향적이거나, 잘못된 서술이 있을 수 있습니다.나무위키는 위키위키입니다. 여러분이 직접 문서를 고칠 수 있으며, 다른 사람의 의견을 원할 경우 직접 토론을 발제할 수 있습니다.'

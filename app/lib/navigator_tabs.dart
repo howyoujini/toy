@@ -1,6 +1,6 @@
-import 'package:app/screen/chat/v_chat.dart';
-import 'package:app/screen/home/v_home.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:app/screen/today/v_today.dart';
+import 'package:app/screen/chat/v_chat.dart';
 
 class NavigatorTabs extends StatefulWidget {
   const NavigatorTabs({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class NavigatorTabs extends StatefulWidget {
 
 class _NavigatorTabsState extends State<NavigatorTabs> {
   final List<Widget> _tab = [
-    const HomeScreen(),
+    const TodayScreen(),
     const ChatBotScreen(),
     const ChatBotScreen(),
     const ChatBotScreen(),
@@ -27,7 +27,7 @@ class _NavigatorTabsState extends State<NavigatorTabs> {
               BottomNavigationBarItem(icon: Icon(CupertinoIcons.today), label: 'Today'),
               BottomNavigationBarItem(icon: Icon(CupertinoIcons.rocket_fill), label: 'Games'),
               BottomNavigationBarItem(icon: Icon(CupertinoIcons.layers_alt_fill), label: 'Apps'),
-              BottomNavigationBarItem(icon: Icon(CupertinoIcons.wand_stars_inverse), label: 'Archive'),
+              BottomNavigationBarItem(icon: Icon(CupertinoIcons.chat_bubble_2_fill), label: 'Chatting'),
               BottomNavigationBarItem(icon: Icon(CupertinoIcons.search), label: 'Search')
             ],
           ),
